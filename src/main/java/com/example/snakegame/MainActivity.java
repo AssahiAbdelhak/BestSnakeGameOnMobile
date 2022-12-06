@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
     private void putRandomApple() {
         Random rand = new Random();
         xApple = rand.nextInt(50)*20;
-        yApple = rand.nextInt(50)*50;
+        yApple = rand.nextInt(50)*20;
         apple.setTranslationX(xApple);
         apple.setTranslationY(yApple);
     }
