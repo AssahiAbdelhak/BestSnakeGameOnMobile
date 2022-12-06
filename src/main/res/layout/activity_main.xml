@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score : 0"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:id="@+id/score"/>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:translationX="100dp"
+            android:background="@drawable/round"
+            android:backgroundTint="#EFD811"
+            android:visibility="gone"
+            android:id="@+id/apple"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/up"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/up"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+        <ImageButton
+            android:id="@+id/down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/left"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_arrow_downward_24" />
+
+        <ImageButton
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/up"
+            android:layout_toRightOf="@id/up"
+            android:src="@drawable/ic_baseline_arrow_forward_24" />
+
+        <ImageButton
+            android:id="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_baseline_arrow_upward_24" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
